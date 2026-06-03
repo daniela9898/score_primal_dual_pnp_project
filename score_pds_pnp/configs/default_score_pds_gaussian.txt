@@ -1,0 +1,14 @@
+# Fixed parameters for the first Score-PDS-PnP sanity experiments.
+# No automatic parameter selection is used.
+
+gamma1 = 0.5
+gamma2 = 0.99
+alpha = 0.82
+score_sigma_begin = 120/255
+score_sigma_end = 10/255
+
+# First sanity setting:
+task = Gaussian deblurring
+noise = 0.0025
+images = PDS repo datasets/imagenet, 7 images
+iterations = 1200

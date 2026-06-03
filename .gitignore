@@ -1,0 +1,9 @@
+# Python/cache only
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+refs/score_pnp_ref/pretrained_models/score/imagenet256.pt

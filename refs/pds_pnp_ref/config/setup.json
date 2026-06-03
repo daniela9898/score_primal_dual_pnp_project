@@ -1,0 +1,6 @@
+{
+    "path_test"     : "/home/dc3000/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project/refs/pds_pnp_ref/datasets/imagenet/",
+    "path_result"   : "/home/dc3000/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project/refs/pds_pnp_ref/results_gaussian/",
+    "file_ext"      : "*.png",
+    "root_folder"   : "/home/dc3000/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project/refs/pds_pnp_ref/"
+}
