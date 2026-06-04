@@ -1,6 +1,0 @@
-# Install/update SNORE-PDS drop-in package
-cd /home/dc3000/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project
-unzip -o /path/to/snore_pds_dropin.zip -d .
-export PYTHONPATH="$PWD:$PWD/refs/pds_pnp_ref:$PWD/refs/score_pnp_ref:$PYTHONPATH"
-python -c "import snore_pds; print('snore_pds', getattr(snore_pds, '__version__', 'unknown'))"
-python -m snore_pds.run_table5_deblur --help
