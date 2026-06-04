@@ -1,0 +1,42 @@
+                            [--iters ITERS] [--gamma1 GAMMA1]
+                            [--gamma2 GAMMA2] --denoiser
+                            {paper_dncnn,score_pnp} [--paper-repo PAPER_REPO]
+                            [--denoiser-ckpt DENOISER_CKPT]
+                            [--score-pnp-repo SCORE_PNP_REPO]
+                            [--score-pnp-ckpt SCORE_PNP_CKPT]
+                            [--score-denoiser-type {auto,dncnn,vp_score,score,diffusion}]
+                            [--score-model-image-size SCORE_MODEL_IMAGE_SIZE]
+                            [--lambda-snore LAMBDA_SNORE]
+                            [--sigma-begin SIGMA_BEGIN]
+                            [--sigma-end SIGMA_END]
+                            [--sigma-schedule {constant,linear,geometric}]
+                            [--snore-mc-samples SNORE_MC_SAMPLES]
+                            [--snore-residual-mode {clean,noisy}]
+                            [--seed SEED] [--device DEVICE] --outdir OUTDIR
+                            [--save-every-image] [--log-every LOG_EVERY]
+run_table5_deblur.py: error: the following arguments are required: --denoiser, --outdir
+(pytorch_gpu) dc3000@hera:~/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project$
+(pytorch_gpu) dc3000@hera:~/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project$ cat "$DATA_ROOT/imagennum-images 7 \
+>   --crop-size 128 \
+>   --task deblur \
+>   --kernel-id a \
+>   --noise-std 0.0025 \
+>   --eps-alpha 0.82 \
+>   --iters 1200 \
+>   --gamma1 0.25 \
+>   --gamma2 0.99 \
+>   --denoiser score_pnp \
+>   --score-pnp-repo "$SCORE_REPO" \
+>   --score-pnp-ckpt "$SCORE_CKPT" \
+>   --lambda-snore 1e-6 \
+>   --sigma-begin 0.01 \
+>   --sigma-end 0.0025 \
+>   --sigma-schedule geometric \
+>   --snore-mc-samples 1 \
+>   --snore-residual-mode clean \
+>   --seed 0 \
+>   --outdir results_table5_sigma0025/score_pnp_snore
+>
+> ^C
+(pytorch_gpu) dc3000@hera:~/shares/mdrive/PhD/projects_6oct2025/score_primal_dual_pnp_project$ tmux capture-pane -p > tmux_output.txt
+

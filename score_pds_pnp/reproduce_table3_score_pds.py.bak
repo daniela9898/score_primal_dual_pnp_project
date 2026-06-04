@@ -59,12 +59,6 @@ def main() -> None:
     parser.add_argument("--result_tag", default="table3_score_pds")
     parser.add_argument("--save_images", action="store_true")
 
-    # Optional overrides for grid searches.
-    # If left as None, the script uses the default per-noise settings.
-    parser.add_argument("--score_sigma_begin", type=float, default=None)
-    parser.add_argument("--score_sigma_end", type=float, default=None)
-    parser.add_argument("--denoise_relax", type=float, default=None)
-
     args = parser.parse_args()
 
     workspace = Path(args.workspace).resolve()
@@ -167,14 +161,7 @@ def main() -> None:
             raise ValueError(f"No Score-PDS params configured for noise level {nl}")
 
         alpha = alpha_by_noise[nl_key]
-        score_params = dict(score_params_by_noise[nl_key])
-
-        if args.score_sigma_begin is not None:
-            score_params["score_sigma_begin"] = args.score_sigma_begin
-        if args.score_sigma_end is not None:
-            score_params["score_sigma_end"] = args.score_sigma_end
-        if args.denoise_relax is not None:
-            score_params["denoise_relax"] = args.denoise_relax
+        score_params = score_params_by_noise[nl_key]
 
         final_kernel_psnrs = []
         best_kernel_psnrs = []
