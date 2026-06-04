@@ -1,0 +1,2 @@
+task,eta,image,final_psnr,final_ssim,best_psnr,best_iter,ssim_at_best_psnr,final_update,runtime_per_iter,lambda,max_iter,gamma1,gamma2,r,score_sigma_begin,score_sigma_end,denoise_relax,clip_denoiser_input
+Deblurring,100,01.png,22.530136108398438,0.5961182713508606,22.530136108398438,20,0.5961182713508606,0.0036784096155315638,0.49906821715000016,0.00125,20,0.5,0.99,1.0,80.0,2.55,0.1,False

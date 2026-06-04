@@ -56,15 +56,6 @@ def test_iter(x_0, x_obsrv, x_true, phi, adj_phi, gamma1, gamma2, alpha_s, alpha
         psnr_data[i] = eval_psnr(x_true, x_n)
         ssim_data[i] = eval_ssim(x_true, x_n)
 
-        if (i + 1) % 100 == 0 or i == 0 or i == max_iter - 1:
-            print(
-                f"    iter {i+1:05d}/{max_iter} "
-                f"PSNR:{psnr_data[i]:.3f} "
-                f"SSIM:{ssim_data[i]:.4f} "
-                f"c:{c[i]:.3e}",
-                flush=True,
-            )
-
     torch.cuda.synchronize(); 
     end_time = time.process_time()
     average_time = (end_time - start_time)/max_iter

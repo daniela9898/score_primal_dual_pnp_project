@@ -1,0 +1,2 @@
+noise,kernel_index,kernel_file,image_index,image,final_psnr,final_ssim,best_psnr,best_iter,ssim_at_best_psnr,final_update,runtime_per_iter,max_iter,gamma1,gamma2,alpha,score_sigma_begin,score_sigma_end,denoise_relax
+0.01,1,blur_1.mat,1,ILSVRC2012_val_00000491.JPEG.png,28.042104721069336,0.7449150085449219,28.098552703857422,18,0.7529086470603943,0.004162799566984177,2.7040003634500005,20,0.5,0.99,0.92,80.0,2.55,0.1
